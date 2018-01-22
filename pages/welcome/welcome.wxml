@@ -1,0 +1,26 @@
+<!--pages/welcome/welcome.wxml-->
+<!--start.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/image/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <!--image class="title" src="/image/wechat.png"></image-->
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+        <!--
+        <image class="wave" src="/image/wechat.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/image/wechat.png" mode="aspectFill"></image>
+        -->
+      </view>
+      <view class="bd">
+         <image class="smalltitle" src="/image/welcome.png"></image>
+        <view class="confirm-btn" bindtap='goToIndex'>
+          <text >进入</text>
+        </view>
+        <text class="copyright">Copyright © 2017 伊宅购</text>
+      </view>
+    </view>
+  </block>
+</view>

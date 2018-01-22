@@ -1,0 +1,29 @@
+<!--pages/indexs/indexs.wxml-->
+<view class="container">
+
+  <view class="coupons" hidden="{{hasNoCoupons}}">
+    <scroll-view class="coupons-scroll" scroll-x="true">
+      <view class="coupons-item" wx:for-items="{{coupons}}" wx:key="id" wx:for-item="item">
+        <image style="width: 300px; height: 100px; background-color: #eeeeee;" mode="aspectFill" src="{{item.Logo}}" />
+
+        <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view>
+            <image class="profile" mode="aspectFill" src="{{item.Logo}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{item.CamperTypeName}} </view>
+            <view class="weui-media-box__desc">满 {{item.DailyPrice}} 元使用</view>
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view class="confirm-btn" bindtap='goToQr'>
+    <button class='weui-btn' type='warn'>扫码</button>
+  </view>
+
+  <button data-name="shareBtn" open-type="share">转发</button>
+</view>

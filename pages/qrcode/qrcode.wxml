@@ -1,0 +1,5 @@
+
+<view class="scanContainer">
+  <text>{{scanValue}}</text>
+  <button type="primary" size="default" class="button-scan" bindtap="openQr">扫一扫</button>
+</view>
