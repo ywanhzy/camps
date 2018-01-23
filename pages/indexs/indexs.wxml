@@ -1,5 +1,27 @@
 <!--pages/indexs/indexs.wxml-->
 <view class="container">
+  <view class="top">
+    <view class="top_c">
+      <image class="top_img" src="/image/wechat.png" />
+      <text class="top_text" >开锁</text>
+    </view>
+    <view class="top_c" >
+     <image class="top_img"  src="/image/wechat.png" />
+      <text class="top_text" >扫一扫</text>
+    </view>
+    <view class="top_c">
+      <image class="top_img"  src="/image/wechat.png" />
+      <text class="top_text" >付款</text>
+    </view>
+  </view>
+  <view class="discovery">
+  <view cla="title">
+  <text>发现</text>
+  <text>在5A级景区住房车</text>
+  <text>更多</text>
+  </view>
+
+  </view>
 
   <view class="coupons" hidden="{{hasNoCoupons}}">
     <scroll-view class="coupons-scroll" scroll-x="true">
