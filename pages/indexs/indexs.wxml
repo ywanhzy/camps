@@ -1,46 +1,63 @@
 <!--pages/indexs/indexs.wxml-->
 <view class="container">
   <view class="top">
+
     <view class="top_c">
       <image class="top_img" src="/image/wechat.png" />
-      <text class="top_text" >开锁</text>
+      <text class="top_text">开锁</text>
     </view>
-    <view class="top_c" >
-     <image class="top_img"  src="/image/wechat.png" />
-      <text class="top_text" >扫一扫</text>
+  
+    <view class="top_c" bindtap='goToQr'>
+      <image class="top_img" src="/image/wechat.png" />
+      <text class="top_text">扫一扫</text>
     </view>
+    
     <view class="top_c">
-      <image class="top_img"  src="/image/wechat.png" />
-      <text class="top_text" >付款</text>
+      <image class="top_img" src="/image/wechat.png" />
+      <text class="top_text">付款</text>
     </view>
   </view>
   <view class="discovery">
-  <view cla="title">
-  <text>发现</text>
-  <text>在5A级景区住房车</text>
-  <text>更多</text>
-  </view>
+    <view class="title">
+      <view class="left">
+        <text class="title_sub1">发现</text>
+        <text class="title_sub2">在5A级景区住房车</text>
+      </view>
+      <view class="right">
+        <text>更多</text>
+      </view>      
+    </view>
 
-  </view>
-
-  <view class="coupons" hidden="{{hasNoCoupons}}">
-    <scroll-view class="coupons-scroll" scroll-x="true">
-      <view class="coupons-item" wx:for-items="{{coupons}}" wx:key="id" wx:for-item="item">
-        <image style="width: 300px; height: 100px; background-color: #eeeeee;" mode="aspectFill" src="{{item.Logo}}" />
-
-        <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-          <view>
-            <image class="profile" mode="aspectFill" src="{{item.Logo}}" />
+    <view class="coupons" hidden="{{hasNoCoupons}}">
+      <scroll-view class="coupons-scroll" scroll-x="true">
+        <view class="coupons-item" wx:for-items="{{coupons}}" wx:key="id" wx:for-item="item">
+          <view class="coupons-img">
+            <image class="coupons-img-img" mode="aspectFill" src="{{item.Logo}}" />
+            <text class='coupons-img-text'>￥200起</text>
           </view>
-          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-            <view class="weui-media-box__title">{{item.CamperTypeName}} </view>
-            <view class="weui-media-box__desc">满 {{item.DailyPrice}} 元使用</view>
+          <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view>
+              <image class="profile" mode="aspectFill" src="{{item.Logo}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.CamperTypeName}} </view>
+              <view class="weui-media-box__desc">满 {{item.DailyPrice}} 元使用</view>
+            </view>
           </view>
         </view>
-
-      </view>
-    </scroll-view>
+      </scroll-view>
+    </view>
   </view>
+
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class='weui-cell__bd'>
+      <text class="line-title">小区：</text>
+      <text class="line-content">魏公村小区</text>
+    </view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+
 
 
   <view class="confirm-btn" bindtap='goToQr'>
